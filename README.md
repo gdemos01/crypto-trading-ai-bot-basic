@@ -1,5 +1,8 @@
-# Crypto Trading AI Bot - V. 0.1
-Source code for the Crypto-trading AI Bot - Still at proof of concept stage
+# Crypto Trading AI Bot - Basic Version
+Source code for the Crypto-trading AI Bot used in the following YouTube video
+
+I Coded A Crypto Trading AI And Gave It $1000 To Trade For A Month!
+https://www.youtube.com/watch?v=f5ZuF4V9Sl4
 
 ## How to Use
 Currently you can use this code to:
