@@ -57,7 +57,7 @@ class Dataset:
         Creates the train/test sets (X,Y) based on a selection of windows and features.
         Raw variable headings: [time, low, high, open, close, volume]
     """
-    def createTrainTestSets(self,coin_name, coin_data, training_window = 180, labeling_window = 60, feature_window = 30):
+    def createTrainTestSets(self,coin_name, coin_data, training_window = 180, labeling_window = 60, feature_window = 30, for_eval = False):
         print("> Creating X,Y sets for ",coin_name)
         x = []
         y = []
@@ -182,6 +182,7 @@ class Dataset:
         print("> Finished Creating set - Size: ",len(x)," ",len(y)," P: ",positive," N: ",negative)
 
         x = preprocessing.scale(x)
-        x, y, prices = shuffle(x,y,prices)
+        if not for_eval:
+            x, y, prices = shuffle(x,y,prices)
 
         return np.array(x), np.array(y), prices

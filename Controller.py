@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
         print("> Creating Testing Data for ", COIN_PAIR)
         data = dataset.loadCoinData(COIN_PAIR, TESTING_MONTHS)
-        x_test, y_test, prices = dataset.createTrainTestSets(COIN_PAIR, data, training_window=TRAINING_WINDOW, labeling_window=LABELING_WINDOW)
+        x_test, y_test, prices = dataset.createTrainTestSets(COIN_PAIR, data, training_window=TRAINING_WINDOW, labeling_window=LABELING_WINDOW, for_eval= True)
 
         test_model = Model("AutoTraderAI", x_train)
         test_model.train(x_train, y_train, batch_size=64, epochs=10)
